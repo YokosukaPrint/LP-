@@ -270,3 +270,75 @@ ul {
   width: 100%;
   cursor: pointer;
 }
+/* ==========================================
+   スマホ用の設定（画面の横幅が768px以下のとき）
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* ファーストビューを縦並びにする */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero-text h2 {
+    font-size: 32px; /* スマホ用に文字を少し小さく */
+  }
+  .features-list {
+    flex-direction: column; /* 特徴リストも縦並びに */
+    gap: 10px;
+    align-items: center;
+  }
+  .hero-buttons {
+    flex-direction: column; /* ボタンも縦に2つ並べる */
+    gap: 15px;
+  }
+  .btn-large {
+    width: 100%; /* ボタンを横幅いっぱいに広げて押しやすく */
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  .dummy-image {
+    width: 100%; /* 画像エリアもスマホの幅に合わせる */
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  /* 人気のアイテムを2列にする */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 6並びから2並びに変更 */
+    gap: 15px;
+  }
+  .product-icon {
+    height: 80px;
+    font-size: 36px;
+  }
+
+  /* 自動見積もりを縦並びにする */
+  .estimation-box {
+    flex-direction: column; /* 横並びから縦並びに */
+    align-items: stretch;
+    padding: 20px;
+  }
+  .est-left {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .est-center {
+    flex-direction: column; /* セレクトボックスを縦に並べる */
+    gap: 15px;
+  }
+  .form-group select {
+    width: 100%; /* セレクトボックスを押しやすく広げる */
+  }
+  .est-right {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+
+  /* ヘッダーのナビゲーションをスマホでは一旦非表示に（スッキリさせるため） */
+  .global-nav {
+    display: none;
+  }
+}

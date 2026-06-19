@@ -3,249 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YokosukaPrint - オリジナルプリント</title>
+  <title>YOKOSUKA PRINT - オリジナルプリント</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
+  <header class="header">
   <div class="header-inner">
+
     <a href="index.html" class="logo">
-      <img src="images/LOGO.png" alt="YokosukaPrint" class="logo-img">
-      <span class="logo-main">YokosukaPrint</span>
-    </a>
+  <img src="images/LOGO.png" alt="YOKOSUKA PRINT" class="logo-img">
+
+  <div class="logo-text">
+    <span class="logo-main">YokosukaPrint</span>
+    <span class="logo-sub">自由なデザイン
+    </span>
+  </div>
+</a>
 
     <nav class="global-nav">
       <ul>
-        <li><a href="#products">商品一覧</a></li>
-        <li><a href="#print-methods">プリント方法</a></li>
-        <li><a href="#price">料金表</a></li>
-        <li><a href="#gallery">制作実績</a></li>
-        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#">商品一覧</a></li>
+        <li><a href="#">プリント方法</a></li>
+        <li><a href="#">料金表</a></li>
+        <li><a href="#">制作実績</a></li>
+        <li><a href="#">よくある質問</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a href="#estimate" class="btn btn-primary">無料見積もり</a>
-      <span class="cart-icon">🛒</span>
+      <a href="#" class="btn btn-primary">無料見積もり</a>
+      <a href="#" class="cart-icon">🛒</a>
     </div>
+
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>業界最安級の<br><span>オリジナルプリント</span></h1>
-      <p>1枚から大量注文まで対応！<br>横須賀から全国へお届けします</p>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h2 class="hero-title">業界最安級の<span class="text-orange">オリジナルプリント</span></h2>
+        <p class="hero-sub">1枚から大量注文まで対応！横須賀から全国へお届けします</p>
+        
+        <ul class="features-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E87A35" stroke-width="3" style="margin-right: 2px;"><path d="M20 6L9 17l-5-5"></path></svg>
+            1枚からOK
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E87A35" stroke-width="3" style="margin-right: 2px;"><path d="M20 6L9 17l-5-5"></path></svg>
+            最短即日発送
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E87A35" stroke-width="3" style="margin-right: 2px;"><path d="M20 6L9 17l-5-5"></path></svg>
+            デザインサポート無料
+          </li>
+        </ul>
 
-      <div class="hero-points">
-        <div>👕 1枚からOK</div>
-        <div>🚚 最短即日発送</div>
-        <div>🎨 デザインサポート無料</div>
-      </div>
-
-      <div class="hero-buttons">
-        <a href="#estimate" class="btn btn-primary btn-large">無料で自動見積もり</a>
-        <a href="#price" class="btn btn-outline btn-large">料金表を見る</a>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary btn-large">無料で自動見積もり</a>
+          <a href="#" class="btn btn-outline btn-large">料金表を見る</a>
+        </div>
       </div>
     </div>
-
-    <div class="hero-images">
-      <img src="images/Tsyatsu.png" alt="Tシャツ" class="hero-shirt">
-      <img src="images/parkar.png" alt="パーカー" class="hero-parka">
-    </div>
-  </div>
-</section>
-
-<section class="products" id="products">
+  </section>
+<section class="products">
   <div class="container">
-    <h2 class="section-title">人気のアイテム</h2>
+    <h3 class="section-title">人気のアイテム</h3>
 
     <div class="product-grid">
+
       <div class="product-item">
-        <img src="images/Tsyatsu.png" alt="Tシャツ">
+        <div class="product-icon-wrap">
+          <img src="images/Tsyatsu.png" alt="Tシャツ">
+        </div>
         <p>Tシャツ</p>
       </div>
 
       <div class="product-item">
-        <img src="images/parkar.png" alt="パーカー">
+        <div class="product-icon-wrap">
+          <img src="images/parkar.png" alt="パーカー">
+        </div>
         <p>パーカー</p>
       </div>
 
       <div class="product-item">
-        <img src="images/nagasode.png" alt="長袖Tシャツ">
+        <div class="product-icon-wrap">
+          <img src="images/nagasode.png" alt="長袖Tシャツ">
+        </div>
         <p>長袖Tシャツ</p>
       </div>
+
     </div>
 
-    <div class="text-right-link">
-      <a href="#estimate">すべての商品を見る ＞</a>
-    </div>
   </div>
 </section>
 
-<section class="estimate" id="estimate">
-  <div class="container">
-    <div class="estimate-box">
-      <div class="estimate-left">
-        <h2>自動で簡単見積もり</h2>
-        <p>商品・枚数・プリント方法を選ぶだけ！</p>
-        <div class="badge">その場で概算金額がわかる！</div>
+  <section class="estimation">
+    <div class="container">
+      <div class="estimation-box">
+        
+        <div class="est-left">
+          <h3>自動で簡単見積もり</h3>
+          <p>商品・枚数・プリント方法を選ぶだけ！</p>
+          <div class="est-badge">その場で概算金額がわかる！</div>
+        </div>
+
+        <div class="est-center">
+          <div class="form-group">
+            <label>商品</label>
+            <select id="product-select">
+              <option value="1000">Tシャツ (¥1,000)</option>
+              <option value="1500">長袖シャツ (¥1,500)</option>
+              <option value="2500">パーカー (¥2,500)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>枚数</label>
+            <select id="quantity-select">
+              <option value="1">1枚</option>
+              <option value="10" selected>10枚</option>
+              <option value="30">30枚</option>
+              <option value="50">50枚</option>
+              <option value="100">100枚</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>プリント方法</label>
+            <select id="print-select">
+              <option value="500">インクジェット (+¥500)</option>
+              <option value="300">シルクスクリーン (+¥300)</option>
+              <option value="400">DTFプリント (+¥400)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>プリント位置</label>
+            <select id="position-select">
+              <option value="0">胸</option>
+              <option value="0">背中</option>
+              <option value="200">両面 (+¥200)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="est-right">
+          <div class="total-label">合計金額</div>
+          <div class="total-price">¥<span id="price-result">15,000</span></div>
+          <button class="btn btn-primary est-btn">この内容で見積もりを依頼する</button>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div class="estimate-form">
-        <div class="form-group">
-          <label>商品</label>
-          <select id="product-select">
-            <option value="1000">Tシャツ</option>
-            <option value="2500">パーカー</option>
-            <option value="1500">長袖Tシャツ</option>
-          </select>
+  <section class="print-methods">
+    <div class="container">
+      <h3 class="section-title-left">プリント方法</h3>
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="インクジェット">
+          </div>
+          <div class="method-content">
+            <h4>インクジェットプリント</h4>
+            <p>フルカラーで鮮やかに再現。写真やグラデーションに最適！</p>
+            <a href="#" class="card-link">詳しく見る ＞</a>
+            
+          </div>
         </div>
-
-        <div class="form-group">
-          <label>枚数</label>
-          <select id="quantity-select">
-            <option value="1">1枚</option>
-            <option value="10" selected>10枚</option>
-            <option value="30">30枚</option>
-            <option value="50">50枚</option>
-            <option value="100">100枚</option>
-          </select>
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=400&q=80" alt="シルクスクリーン">
+          </div>
+          <div class="method-content">
+            <h4>シルクスクリーンプリント</h4>
+            <p>耐久性が高く、大量注文に必ずおすすめ！コストも◎</p>
+            <a href="#" class="card-link">詳しく見る ＞</a>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label>プリント方法</label>
-          <select id="print-select">
-            <option value="500">インクジェット</option>
-            <option value="300">シルクスクリーン</option>
-            <option value="400">DTFプリント</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>プリント位置</label>
-          <select id="position-select">
-            <option value="0">胸</option>
-            <option value="0">背中</option>
-            <option value="200">両面</option>
-          </select>
+        <div class="method-card">
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1513346204612-78cf00257008?auto=format&fit=crop&w=400&q=80" alt="DTFプリント">
+          </div>
+          <div class="method-content">
+            <h4>DTFプリント</h4>
+            <p>細かいデザイン・多色表現に強い最新プリント！</p>
+            <a href="#" class="card-link">詳しく見る ＞</a>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="estimate-result">
-        <p>合計金額</p>
-        <div class="price">¥<span id="price-result">0</span></div>
-        <button id="estimate-button" class="btn btn-primary">この内容で見積もりを依頼する</button>
+  <section class="gallery">
+    <div class="container">
+      <h3 class="section-title-left">制作実績</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=300&q=80" alt="実績1"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=300&q=80" alt="実績2"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=300&q=80" alt="実績3"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?auto=format&fit=crop&w=300&q=80" alt="実績4"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=300&q=80" alt="実績5"></div>
       </div>
+      <div class="text-right-link">
+        <a href="#" class="more-link">すべての制作実績を見る ＞</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-bar">
+    <div class="container footer-bar-inner">
+      <div class="bar-item">🛡️ 業界最安級に挑戦</div>
+      <div class="bar-item">👕 1枚から注文OK</div>
+      <div class="bar-item">📦 大量注文でさらにお得</div>
+      <div class="bar-item">🚚 最短即日発送</div>
+      <div class="bar-item">🎨 デザインサポート無料</div>
     </div>
   </div>
-</section>
 
-<section class="print-methods" id="print-methods">
-  <div class="container">
-    <h2 class="section-title-left">プリント方法</h2>
-
-    <div class="method-grid">
-      <div class="method-card">
-        <div class="method-img inkjet"></div>
-        <div class="method-content">
-          <h3>インクジェットプリント</h3>
-          <p>フルカラーで鮮やかに再現。写真やグラデーションに最適！</p>
-          <a href="#">詳しく見る ＞</a>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-img silk"></div>
-        <div class="method-content">
-          <h3>シルクスクリーンプリント</h3>
-          <p>耐久性が高く、大量注文におすすめ。コストも抑えやすい。</p>
-          <a href="#">詳しく見る ＞</a>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-img dtf"></div>
-        <div class="method-content">
-          <h3>DTFプリント</h3>
-          <p>細かいデザイン・多色表現に強い最新プリント。</p>
-          <a href="#">詳しく見る ＞</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="price-section" id="price">
-  <div class="container">
-    <h2 class="section-title">料金の目安</h2>
-
-    <div class="price-grid">
-      <div class="price-card">
-        <h3>Tシャツ</h3>
-        <p>1枚〜</p>
-        <strong>¥1,500〜</strong>
-      </div>
-      <div class="price-card">
-        <h3>長袖Tシャツ</h3>
-        <p>1枚〜</p>
-        <strong>¥2,000〜</strong>
-      </div>
-      <div class="price-card">
-        <h3>パーカー</h3>
-        <p>1枚〜</p>
-        <strong>¥3,000〜</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="gallery" id="gallery">
-  <div class="container">
-    <h2 class="section-title-left">制作実績</h2>
-
-    <div class="gallery-grid">
-      <img src="images/Tsyatsu.png" alt="制作実績">
-      <img src="images/parkar.png" alt="制作実績">
-      <img src="images/nagasode.png" alt="制作実績">
-    </div>
-
-    <div class="text-right-link">
-      <a href="#estimate">すべての制作実績を見る ＞</a>
-    </div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="container">
-    <h2 class="section-title">よくある質問</h2>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>Q. 1枚から注文できますか？</h3>
-        <p>A. はい、1枚から注文可能です。</p>
-      </div>
-      <div class="faq-item">
-        <h3>Q. デザインがなくても大丈夫ですか？</h3>
-        <p>A. 大丈夫です。デザイン作成からサポートできます。</p>
-      </div>
-      <div class="faq-item">
-        <h3>Q. 全国発送できますか？</h3>
-        <p>A. はい、横須賀から全国へ発送可能です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer-bar">
-  <div>🏷️ 業界最安級に挑戦</div>
-  <div>👕 1枚から注文OK</div>
-  <div>📦 大量注文対応</div>
-  <div>🚚 全国発送OK</div>
-  <div>🎨 デザインサポート無料</div>
-</footer>
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

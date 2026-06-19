@@ -1,43 +1,43 @@
-/* 基本設定 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", Meiryo, sans-serif;
+  color: #1a2530;
+  background: #fff;
   line-height: 1.6;
-  background-color: #fff;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ul {
   list-style: none;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-/* ヘッダー */
 .header {
-  width: 100%;
   height: 86px;
-  border-bottom: 1px solid #eee;
   background: #fff;
+  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 
 .header-inner {
-  max-width: 1280px;
   height: 86px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 28px;
   display: flex;
@@ -46,17 +46,22 @@ ul {
 }
 
 .logo {
-  width: 180px;
+  width: 260px;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  gap: 12px;
 }
 
 .logo-img {
-  height: 64px;
+  height: 58px;
   width: auto;
   object-fit: contain;
-  display: block;
+}
+
+.logo-main {
+  font-size: 23px;
+  font-weight: 900;
+  color: #111;
 }
 
 .global-nav {
@@ -67,438 +72,501 @@ ul {
 
 .global-nav ul {
   display: flex;
-  align-items: center;
-  gap: 34px;
+  gap: 32px;
   font-size: 15px;
   font-weight: 700;
 }
 
+.global-nav a:hover {
+  color: #ff6a00;
+}
+
 .header-actions {
-  width: 220px;
+  width: 230px;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
   gap: 18px;
-  flex-shrink: 0;
 }
 
 .cart-icon {
-  font-size: 26px;
-  line-height: 1;
+  font-size: 25px;
 }
 
-/* ロゴエリア全体の調整 */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo-img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-}
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-.logo-main {
-  font-weight: 900;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  color: #1a2530;
-}
-.logo-sub {
-  font-weight: 700;
-  font-size: 14px;
-  color: #1a2530;
-  letter-spacing: 0.05em;
-}
-
-.global-nav ul {
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.cart-icon svg {
-  vertical-align: middle;
-}
-
-/* ボタン共通 */
 .btn {
   display: inline-block;
-  padding: 8px 22px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-weight: 800;
   text-align: center;
-}
-.btn-primary {
-  background-color: #E87A35;
-  color: #fff;
+  cursor: pointer;
   border: none;
 }
-.btn-primary:hover {
-  background-color: #d26524;
+
+.btn-primary {
+  background: #ff6a00;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(255, 106, 0, 0.25);
 }
+
 .btn-outline {
-  border: 1px solid #E87A35;
-  color: #E87A35;
-  background: transparent;
+  background: #fff;
+  color: #ff6a00;
+  border: 2px solid #ff6a00;
 }
-.btn-outline:hover {
-  background-color: #fdf3ed;
-}
+
 .btn-large {
-  padding: 12px 35px;
-  font-size: 18px;
+  padding: 15px 42px;
+  font-size: 17px;
 }
 
-/* ヒーローセクション（中央寄せ配置） */
 .hero {
-  background-color: #fcfcfc;
-  padding: 80px 0;
-  text-align: center;
-}
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-}
-.hero-text {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-title {
-  font-size: 48px;
-  font-weight: 900;
-  margin-bottom: 20px;
-  white-space: nowrap;
-}
-.text-orange {
-  color: #E87A35;
-}
-.hero-sub {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 25px;
+  background: linear-gradient(90deg, #fff 0%, #fff 48%, #fafafa 100%);
+  padding: 58px 0 50px;
+  overflow: hidden;
 }
 
-/* チェックマークのフィーチャーリスト */
-.features-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 40px;
-  font-weight: bold;
-  color: #444;
-}
-.features-list li {
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 36px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
+.hero-text {
+  width: 48%;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  line-height: 1.25;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.hero-text h1 span {
+  color: #ff6a00;
+}
+
+.hero-text p {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.hero-points {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-weight: 800;
+  margin-bottom: 34px;
+}
+
 .hero-buttons {
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
-/* 人気のアイテム */
-.products {
-  padding: 60px 0;
+.hero-images {
+  width: 50%;
+  height: 420px;
+  position: relative;
 }
+
+.hero-shirt {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  width: 360px;
+  z-index: 2;
+}
+
+.hero-parka {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 330px;
+  z-index: 1;
+}
+
+.products {
+  padding: 56px 0 44px;
+}
+
 .section-title {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 40px;
-  position: relative;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 42px;
 }
+
+.section-title-left {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 28px;
+}
+
 .product-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 60px;
+  align-items: flex-end;
+  gap: 90px;
   flex-wrap: wrap;
 }
 
 .product-item {
-  width: 220px;
+  width: 240px;
   text-align: center;
 }
 
-.product-icon-wrap {
-  background: #f5f5f5;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.product-icon-wrap img {
-  width: 100%;
-  height: 100%;
+.product-item img {
+  width: 240px;
+  height: 240px;
   object-fit: contain;
 }
 
 .product-item p {
+  font-size: 18px;
+  font-weight: 900;
   margin-top: 10px;
-  font-size: 16px;
-  font-weight: 700;
-}}
-.product-item {
-  text-align: center;
-  width: 150px;
 }
-.product-icon-wrap {
-  width: 220px;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  overflow: visible;
-  background: transparent;
-}
-.product-icon-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.product-item p {
-  font-weight: bold;
-  font-size: 15px;
-}
+
 .text-right-link {
   text-align: right;
-  max-width: 1000px;
-  margin: 20px auto 0;
-}
-.more-link {
-  font-size: 14px;
-  font-weight: bold;
-  color: #666;
-}
-
-/* 自動見積もり */
-.estimation {
-  padding: 40px 0;
-}
-.estimation-box {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 25px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-}
-.est-left h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.est-left p {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 8px;
-}
-.est-badge {
-  background: #ff4a7d;
-  color: #fff;
-  font-size: 11px;
-  padding: 4px 10px;
-  border-radius: 15px;
-  display: inline-block;
-  font-weight: bold;
-}
-.est-center {
-  display: flex;
-  gap: 12px;
-  flex: 1;
-}
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.form-group label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #555;
-}
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  background-color: #fafafa;
-}
-.est-right {
-  text-align: right;
-}
-.total-label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #666;
-}
-.total-price {
-  font-size: 32px;
-  color: #ff4a7d;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.est-btn {
-  font-size: 14px;
-  padding: 10px 20px;
-}
-
-/* プリント方法 */
-.print-methods {
-  padding: 60px 0;
-  background-color: #fafafa;
-}
-.section-title-left {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.method-grid {
-  display: flex;
-  gap: 20px;
-}
-.method-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #eee;
-}
-.method-img {
-  height: 180px;
-}
-.method-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.method-content {
-  padding: 20px;
-}
-.method-content h4 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.method-content p {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 15px;
-  height: 40px;
-  overflow: hidden;
-}
-.card-link {
-  font-size: 13px;
-  font-weight: bold;
+  margin-top: 22px;
+  font-weight: 800;
   color: #333;
 }
 
-/* 制作実績 */
-.gallery {
+.estimate {
+  padding: 36px 0;
+}
+
+.estimate-box {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+}
+
+.estimate-left {
+  width: 240px;
+}
+
+.estimate-left h2 {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.estimate-left p {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 8px 0 14px;
+}
+
+.badge {
+  width: 88px;
+  height: 88px;
+  background: #ff3f72;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.estimate-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+}
+
+.estimate-result {
+  width: 230px;
+  text-align: right;
+}
+
+.estimate-result p {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.price {
+  color: #ff3f72;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.estimate-result button {
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.print-methods {
+  padding: 62px 0;
+  background: #fafafa;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.method-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.method-img {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+
+.inkjet {
+  background: linear-gradient(135deg, #ff8ca8, #7fdcff, #ffe76b);
+}
+
+.silk {
+  background: linear-gradient(135deg, #1a2530, #263d60);
+}
+
+.dtf {
+  background: linear-gradient(135deg, #222, #777);
+}
+
+.method-content {
+  padding: 22px;
+}
+
+.method-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.method-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.method-content a {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.price-section {
   padding: 60px 0;
 }
-.gallery-grid {
-  display: flex;
-  gap: 15px;
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
-.gallery-item {
-  flex: 1;
-  height: 180px;
-  border-radius: 6px;
-  overflow: hidden;
+
+.price-card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  background: #fff;
+}
+
+.price-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.price-card strong {
+  display: block;
+  font-size: 30px;
+  color: #ff6a00;
+  margin-top: 10px;
+}
+
+.gallery {
+  padding: 60px 0;
+  background: #fafafa;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
   border: 1px solid #eee;
 }
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.faq {
+  padding: 60px 0;
 }
 
-/* フッターバー */
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 22px 0;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  color: #555;
+}
+
 .footer-bar {
-  background-color: #1a2530;
+  background: #111;
   color: #fff;
-  padding: 15px 0;
-  font-size: 14px;
-  font-weight: bold;
-}
-.footer-bar-inner {
+  padding: 18px 24px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  flex-wrap: wrap;
+  font-weight: 900;
 }
 
-/* ==========================================
-   スマホ対応用レスポンシブ（768px以下）
-   ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .header {
+    height: auto;
+  }
+
+  .header-inner {
+    height: auto;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    width: auto;
+  }
+
   .global-nav {
-    display: none;
-  }
-  .hero-title {
-    font-size: 32px;
-    white-space: normal;
-  }
-  .hero-sub {
-    font-size: 18px;
-  }
-  .features-list {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-  .hero-buttons {
-    flex-direction: column;
+    order: 3;
     width: 100%;
-    max-width: 300px;
+    overflow-x: auto;
+    justify-content: flex-start;
   }
-  .product-item {
-    width: calc((100% - 20px) / 2);
+
+  .global-nav ul {
+    gap: 20px;
+    white-space: nowrap;
   }
-  .estimation-box {
+
+  .header-actions {
+    width: auto;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    padding: 0 22px;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-text p {
+    font-size: 19px;
+  }
+
+  .hero-points,
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-images {
+    width: 100%;
+    height: 320px;
+    margin-top: 30px;
+  }
+
+  .hero-shirt {
+    width: 250px;
+    left: 10%;
+  }
+
+  .hero-parka {
+    width: 240px;
+    right: 5%;
+  }
+
+  .estimate-box {
     flex-direction: column;
     align-items: stretch;
   }
-  .est-center {
-    flex-direction: column;
-  }
-  .est-right {
+
+  .estimate-left,
+  .estimate-result {
+    width: 100%;
     text-align: center;
-    margin-top: 15px;
   }
-  .method-grid, .gallery-grid, .footer-bar-inner {
-    flex-direction: column;
-    gap: 15px;
+
+  .badge {
+    margin: 0 auto;
   }
-  .method-content p {
-    height: auto;
+
+  .estimate-form {
+    grid-template-columns: 1fr;
+  }
+
+  .method-grid,
+  .price-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    gap: 34px;
   }
 }
